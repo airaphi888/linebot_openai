@@ -28,7 +28,10 @@ openai.api_key = os.getenv('OPENAI_API_KEY')
 
 def GPT_response(text):
     # 接收回應
-    response = openai.ChatCompletion.create(model="gpt-4", messages=text, temperature=0.2, max_tokens=500)
+    response = openai.ChatCompletion.create(model="gpt-4", messages=[
+                {"role": "system", "content": "你是一個有用的助手。"},
+                {"role": "user", "content": text}
+            ], temperature=0.2, max_tokens=500)
     print(response)
     # 重組回應
     answer = response['choices'][0]['text'].replace('。','')
