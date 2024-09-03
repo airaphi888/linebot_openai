@@ -62,7 +62,7 @@ def handle_message(event):
     msg = event.message.text
     
     # 获取机器人的用户 ID
-    bot_user_id = '阿榮慢慢來(Aron2)'  # 将此替换为你实际的 Bot 的 user ID
+    bot_user_id = '阿榮'  # 将此替换为你实际的 Bot 的 user ID
     
     # 检查是否包含机器人 ID（被 @）
     if bot_user_id in msg:
