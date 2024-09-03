@@ -34,7 +34,7 @@ def GPT_response(text):
             ], temperature=0.2, max_tokens=500)
     print(response)
     # 重組回應
-    answer = response['choices'][0]['message'].replace('。','')
+    answer = response['choices'][0]['message']['content'].replace('。','')
     return answer
 
 
