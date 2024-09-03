@@ -61,7 +61,7 @@ def handle_message(event):
         line_bot_api.reply_message(event.reply_token, TextSendMessage(GPT_answer))
     except:
         print(traceback.format_exc())
-        line_bot_api.reply_message(event.reply_token, TextSendMessage('你所使用的OPENAI API key額度可能已經超過，請於後台Log內確認錯誤訊息'))
+        line_bot_api.reply_message(event.reply_token, TextSendMessage('串接有點問題啦  阿榮QQ，你所使用的OPENAI API key額度可能已經超過，請於後台Log內確認錯誤訊息'))
         
 
 @handler.add(PostbackEvent)
