@@ -28,7 +28,7 @@ openai.api_key = os.getenv('OPENAI_API_KEY')
 
 def GPT_response(text):
     # 接收回應
-    response = openai.ChatCompletion.create(model="gpt-4", messages=[
+    response = openai.ChatCompletion.create(model="gpt-4o-mini", messages=[
                 {"role": "system", "content": "你是一個有用的助手。"},
                 {"role": "user", "content": text}
             ], temperature=0.2, max_tokens=500)
